@@ -15,12 +15,10 @@ class SecondFragment : Fragment() {
     private lateinit var binding: FragmentSecondBinding
     private val viewModel: MainViewModel by activityViewModels()
 
-    val args: SecondFragmentArgs by navArgs()
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = DataBindingUtil
             .inflate(inflater, R.layout.fragment_second, container, false)
         return binding.root
@@ -28,7 +26,6 @@ class SecondFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        // binding.greetingTextView.text = getString(R.string.greeting_text,args.name)
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
         val navController = findNavController()

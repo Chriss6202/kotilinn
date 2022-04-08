@@ -4,6 +4,10 @@ plugins {
     id 'androidx.navigation.safeargs.kotlin'
 }
 
+task wrapper(type: Wrapper){
+    gradleVersion = '7.2'
+}
+
 android {
     compileSdk 32
 

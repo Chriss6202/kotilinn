@@ -18,7 +18,8 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_home,container, false)
+        binding = DataBindingUtil
+            .inflate(inflater,R.layout.fragment_home,container, false)
         return binding.root
     }
 
